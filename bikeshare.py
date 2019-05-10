@@ -5,6 +5,7 @@ import pandas as pd
 from calendar import month_name
 from datetime import datetime, timedelta
 
+#loads necessary csv data into CITY_DATA
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
