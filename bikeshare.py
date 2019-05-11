@@ -5,8 +5,8 @@ import pandas as pd
 from calendar import month_name
 from datetime import datetime, timedelta
 
-#loads necessary csv data into CITY_DATA
-CITY_DATA = { 'chicago': 'chicago.csv',
+#loads necessary csv data into C_Data
+C_Data = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
@@ -61,7 +61,7 @@ def get_day():
 
 def load_data(city, month, day):
     # load data file into a dataframe
-    df = pd.read_csv(CITY_DATA[city])
+    df = pd.read_csv(C_Data[city])
     # convert the Start Time column to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     # extract month and day of week from Start Time to create new columns
@@ -177,7 +177,7 @@ def user_details(df):
         latest_birth=df['Birth Year'].max()
         common_birth=df['Birth Year'].mode()[0]
         #https://stackoverflow.com/questions/35614496/how-to-remove-the-0-in-a-integter-in-python
-        print('The earlies, latest and most common birth years are: {}, {} and {} '.format(int(earliest_birth),int(latest_birth),int(common_birth)))
+        print('The earliest, latest and most common birth years are: {}, {} and {} '.format(int(earliest_birth),int(latest_birth),int(common_birth)))
         
     process_time = str(time.process_time() - start_time)
     print('This took ' + process_time+' seconds')
