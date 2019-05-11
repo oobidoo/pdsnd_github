@@ -6,7 +6,7 @@ from calendar import month_name
 from datetime import datetime, timedelta
 
 #loads necessary csv data into C_Data
-C_Data = {'chicago': 'chicago.csv','new york city': 'new_york_city.csv','washington': 'washington.csv' }
+C_Data = {'chicago': 'chicago.csv', 'new york city': 'new_york_city.csv', 'washington': 'washington.csv'}
 
 #Rest of the code
 def get_city():
@@ -37,7 +37,7 @@ def get_month():
     while True:
         month = input('Do you want to filter by a specific month between January and June, or by all: ')
         month = month.lower()
-        if month not in ('january','february','march','april','may','june','all'): # 'january' or month == 'february' or month == 'march' or month == 'april' or month == 'may'or month == 'june' or month == 'all':
+        if month not in ('january', 'february', 'march', 'april', 'may', 'june', 'all'): 
             #print('Selection noted as: {}.'.format(month))
             print('Do you want to filter by a specific month between January and June, or by all:')
         else:
