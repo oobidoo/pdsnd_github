@@ -6,9 +6,7 @@ from calendar import month_name
 from datetime import datetime, timedelta
 
 #loads necessary csv data into C_Data
-C_Data = { 'chicago': 'chicago.csv',
-              'new york city': 'new_york_city.csv',
-              'washington': 'washington.csv' }
+C_Data = {'chicago': 'chicago.csv','new york city': 'new_york_city.csv','washington': 'washington.csv' }
 
 #Rest of the code
 def get_city():
